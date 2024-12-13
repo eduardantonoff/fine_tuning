@@ -1,0 +1,10 @@
+# Ignore macOS system files
+.DS_Store
+
+# Ignore other unwanted files
+*.log
+*.env
+
+# Ignore Python compiled files 
+__pycache__/
+*.pyc
