@@ -1,108 +1,68 @@
-# Хакатон MIPT: Учебная задача
+# MIPT Fine-Tuning RuGPT 3 for Review Analysis and Generation
 
-
-## Бриф: Создать нейронную сеть, способную генерировать текстовые отзывы о различных местах на основе определенных входных параметров, таких как категория места, средний рейтинг и ключевые слова.
-
-Подход к решению задачи: Было принято решение провести эксперименты с 2 моделями для решения задач и по суммаризации, и по генерации отзывов. Финальный выбор модели будет сделан после чекпоинта.
-
-# Описание готового продукта
-
-Данный продукт представляет собой веб-приложение, созданное с использованием фреймворка **Streamlit** и модели **Hugging Face**. 
+## Overview
+This project focuses on leveraging **RuGPT-3** to generate text reviews / extract strengths and weaknesses of establishments for various establishments based on specific input parameters like category, average rating, and keywords. 
 
 ---
 
-## Особенности
-- **Интуитивно понятный интерфейс**: Легкость в использовании благодаря Streamlit.
-- **Поддержка моделей Hugging Face**: Используется предобученная модель для генерации текста.
-- **Кастомизация ввода**: Пользователь задает категорию места, средний рейтинг и ключевые слова для создания отзывов.
-- **Генерация нескольких отзывов**: Возможность получить сразу несколько уникальных вариантов текста.
-
----
-
-## Установка и запуск
-
-### 1. Клонирование репозитория
-Склонируйте данный репозиторий с GitHub:
-
-```bash
-git clone https://github.com/eduardantonoff/fine_tuning
-cd fine_tuning/streamlit_app
-```
-
-### 2. Установка зависимостей
-Убедитесь, что у вас установлен Python 3.7 или выше. Затем установите зависимости:
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Запуск приложения
-Запустите приложение командой:
-
-```bash
-streamlit run app.py
-```
-
-После запуска приложение будет доступно в вашем браузере по адресу:
+## Project Structure
 
 ```
-http://localhost:8501
+├── data
+│   ├── balanced.csv          # Cleaned and balanced dataset
+│   ├── synthetic.csv         # Synthetic dataset
+│   ├── test.csv              # Testing dataset
+├── streamlit
+│   ├── app.py                # Streamlit UI for model interaction
+│   ├── requirements.txt      # Required dependencies for Streamlit
+├── eda.ipynb                 # Notebook for exploratory data analysis
+├── model_one.ipynb           # Training notebook for the generation model
+├── model_two.ipynb           # Training notebook for the extraction model
+├── synthetic.ipynb           # Synthetic data generation process
+├── README.md                 # Project documentation
 ```
 
 ---
 
-## Использование
+## Data Sources
 
-1. **Выберите категорию места**: Например, "Ресторан" или "Отель".
-2. **Укажите средний рейтинг**: Выберите один из вариантов: "Отрицательный", "Нейтральный", "Положительный".
-3. **Введите ключевые слова**: Например, "вкусная еда, уютная атмосфера".
-4. Нажмите кнопку **"Сгенерировать отзывы"**, чтобы получить несколько вариантов текстов.
-
----
-
+- **Geo Reviews Dataset 2023:**
+  - [GitHub](https://github.com/yandex/geo-reviews-dataset-2023)
+  - [HuggingFace](https://huggingface.co/datasets/d0rj/geo-reviews-dataset-2023/tree/main)
 
 ---
 
-## Пример работы
-### Входные данные
-- **Категория**: Ресторан
-- **Рейтинг**: Положительный
-- **Ключевые слова**: "вкусная еда, уютная атмосфера"
+## Data Processing
+The **eda.ipynb** notebook details:
 
-### Сгенерированные отзывы
-1. "Это было потрясающее место с вкусной едой и уютной атмосферой! Обязательно вернусь снова."
-2. "Ресторан приятно удивил: еда на высшем уровне, а атмосфера делает вечер незабываемым."
-3. "Отличное место! Всё, от еды до сервиса, было просто великолепным."
+**Data Cleaning:**
+   - Removed emojis and special characters.
+   - Standardized text formats.
+   - Applied under-sampling techniques using `RandomUnderSampler` to balance class distributions.
+   - Visualized frequent terms using word clouds.
 
 ---
 
-## Требования
-- Python 3.7+
-- Установленные зависимости из `requirements.txt`
+## Model Training
+
+### 1. **Review Generation Model**
+ - TBA
+
+### 2. **Aspect Extraction Model**
+ - TBA
 
 ---
 
-## Поддержка
-Если у вас возникли вопросы или проблемы, пожалуйста, создайте issue в репозитории или свяжитесь со мной напрямую через GitHub.
+## Deployment
+
+- The models and UI are hosted via **Streamlit**.
 
 ---
 
-## Лицензия
-Этот проект распространяется под лицензией MIT. Подробнее смотрите в файле `LICENSE` (если применимо).
+## Team
 
----
-
-## Благодарности
-- [Streamlit](https://streamlit.io) — за удобный фреймворк для создания веб-приложений.
-- [Hugging Face](https://huggingface.co) — за мощные модели машинного обучения.
-
----
-## Команда
-- Эдуард Антонов - подготовка и очистка данных, генерация синтетических данных  
-- Роман Пензов - продакшн
-- Константин Гриднев - обучение моделей
-- Алена Драгунская - аналитик/проджект
-- Якуб Харабет - обучение моделей
-
-
-
+- **Eduard Antonov**: Data preparation and cleaning, synthetic data generation
+- **Roman Penzov**: Production
+- **Konstantin Gridnev**: Model training
+- **Alena Dragunskaya**: Analyst / Project Manager
+- **Yacub Kharabet**: Model training
