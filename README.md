@@ -3,7 +3,6 @@
 ## Overview
 This project focuses on leveraging **RuGPT-3** to generate text reviews / extract strengths and weaknesses of establishments for various establishments based on specific input parameters like category, average rating, and keywords.
 
----
 
 ## Prototype
 
@@ -12,7 +11,6 @@ Experience the capabilities of our model through the live demo:
 [Demo Stand](http://13.228.23.187:8502)
 
 ![Demo Stand](data/demo.png)
----
 
 ## Project Structure
 
@@ -32,15 +30,12 @@ Experience the capabilities of our model through the live demo:
 ├── README.md                 # Project documentation
 ```
 
----
-
 ## Data Sources
 
 - **Geo Reviews Dataset 2023:**
   - [GitHub](https://github.com/yandex/geo-reviews-dataset-2023)
   - [HuggingFace](https://huggingface.co/datasets/d0rj/geo-reviews-dataset-2023/tree/main)
 
----
 
 ## Data Processing
 The **eda.ipynb** notebook details:
@@ -51,11 +46,10 @@ The **eda.ipynb** notebook details:
    - Applied under-sampling techniques using `RandomUnderSampler` to balance class distributions.
    - Visualized frequent terms using word clouds.
 
----
-
 ## Model Training
 
 ### 1. **Review Generation Model**
+
  - TBA
 
 ### 2. **Aspect Extraction Model**
@@ -66,18 +60,14 @@ ROUGE scores:
 
  ![ROUGE](data/rouge.png)
 
----
-
 ## Deployment
 
 - The models and UI are hosted via **Streamlit**.
 
----
-
 ## Team
 
-- **Eduard Antonov**: Data preparation and cleaning, synthetic data generation
-- **Roman Penzov**: Production
-- **Konstantin Gridnev**: Model training
-- **Alena Dragunskaya**: Analyst / Project Manager
-- **Yacub Kharabet**: Model training
+- **Eduard Antonov**: EDA, Synthetic Data, Fine-tuning.
+- **Roman Penzov**: Production.
+- **Konstantin Gridnev**: Model Training.
+- **Alena Dragunskaya**: Analyst / Project Manager.
+- **Yacub Kharabet**: Model Training.
