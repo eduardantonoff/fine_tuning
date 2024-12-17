@@ -59,7 +59,12 @@ The **eda.ipynb** notebook details:
  - TBA
 
 ### 2. **Aspect Extraction Model**
- - TBA
+
+ - This [model](https://drive.google.com/file/d/1USDfb9qCaYulWvxBg09oc1p2ODziG-tK/view?usp=sharing) focuses on identifying key aspects (e.g., pros and cons) mentioned in the review. By learning patterns in the data, it extracts and categorizes these aspects, making it easier to understand the strengths and weaknesses presented in the reviews.
+
+ROUGE scores:
+
+ ![ROUGE](data/rouge.png)
 
 ---
 
