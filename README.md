@@ -1,8 +1,17 @@
 # MIPT Fine-Tuning RuGPT 3 for Review Analysis and Generation
 
 ## Overview
-This project focuses on leveraging **RuGPT-3** to generate text reviews / extract strengths and weaknesses of establishments for various establishments based on specific input parameters like category, average rating, and keywords. 
+This project focuses on leveraging **RuGPT-3** to generate text reviews / extract strengths and weaknesses of establishments for various establishments based on specific input parameters like category, average rating, and keywords.
 
+---
+
+## Prototype
+
+Experience the capabilities of our model through the live demo:
+
+[Demo Stand](http://13.228.23.187:8502)
+
+![Demo Stand](data/demo.png)
 ---
 
 ## Project Structure
@@ -12,13 +21,14 @@ This project focuses on leveraging **RuGPT-3** to generate text reviews / extrac
 │   ├── balanced.csv          # Cleaned and balanced dataset
 │   ├── synthetic.csv         # Synthetic dataset
 │   ├── test.csv              # Testing dataset
+├── notebooks
+│   ├── eda.ipynb             # Notebook for exploratory data analysis
+│   ├── synthetic.ipynb       # Synthetic data generation process
 ├── streamlit
 │   ├── app.py                # Streamlit UI for model interaction
 │   ├── requirements.txt      # Required dependencies for Streamlit
-├── eda.ipynb                 # Notebook for exploratory data analysis
-├── model_one.ipynb           # Training notebook for the generation model
-├── model_two.ipynb           # Training notebook for the extraction model
-├── synthetic.ipynb           # Synthetic data generation process
+├── model_gpt.ipynb           # Training notebook for the generation model
+├── model_t5.ipynb            # Training notebook for the extraction model
 ├── README.md                 # Project documentation
 ```
 
