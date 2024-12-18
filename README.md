@@ -1,4 +1,4 @@
-# MIPT Fine-Tuning RuGPT 3 for Review Analysis and Generation
+# Enhanced Review Analysis and Generation with RuGPT-3 and RuT5
 
 ## Overview
 This project focuses on leveraging **RuGPT-3** and **RuT5** to perform comprehensive review analysis and generation. The primary objective is to automate the creation of insightful and coherent synthetic text reviews, as well as to extract key aspects such as pros and cons from existing reviews. By fine-tuning these models on a curated dataset, we aim to enhance their ability to understand and generate contextually relevant content tailored to specific domains.
@@ -50,9 +50,9 @@ The **eda.ipynb** notebook details:
 
 ### 1. **Review Generation Model**
 
- - TBA
+ - This [model](https://drive.google.com/drive/folders/13YWZ_JbP59bTEcatS8H2cg0WG7QTQb35?usp=drive_link) is designed to generate human-like reviews given two key inputs: the category of the venue (e.g., "restaurant," "hotel") and the sentiment you want the review to convey (e.g., positive, negative, neutral). By conditioning on these factors, the model produces coherent and contextually appropriate reviews that mimic genuine customer feedback. 
 
-### 2. **Aspect Extraction Model**
+### 2. **Aspect Extraction Model | T5**
 
  - This [model](https://drive.google.com/file/d/1USDfb9qCaYulWvxBg09oc1p2ODziG-tK/view?usp=sharing) focuses on identifying key aspects (e.g., pros and cons) mentioned in the review. By learning patterns in the data, it extracts and categorizes these aspects, making it easier to understand the strengths and weaknesses presented in the reviews.
 
