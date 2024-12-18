@@ -1,7 +1,7 @@
 # MIPT Fine-Tuning RuGPT 3 for Review Analysis and Generation
 
 ## Overview
-This project focuses on leveraging **RuGPT-3** to generate text reviews / extract strengths and weaknesses of establishments for various establishments based on specific input parameters like category, average rating, and keywords.
+This project focuses on leveraging **RuGPT-3** and **RuT5** to perform comprehensive review analysis and generation. The primary objective is to automate the creation of insightful and coherent synthetic text reviews, as well as to extract key aspects such as pros and cons from existing reviews. By fine-tuning these models on a curated dataset, we aim to enhance their ability to understand and generate contextually relevant content tailored to specific domains.
 
 
 ## Prototype
